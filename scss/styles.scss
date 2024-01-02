@@ -56,9 +56,51 @@ main {
 }
 
 footer {
-    background-color: #f3311123;
+    background-color: $tamnoPlava;
+    padding: 2rem;
+    color: $hoverZuta;
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        color: $hoverZuta;
+        text-decoration: none;
+    }
+
+    article {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        section {
+            display: flex;
+            gap: 2rem;
+            padding: 1.5rem;
+        }
+    }
 }
 
+
+@include tablet {
+    footer {
+        article {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            section {
+                display: flex;
+                justify-content: center;
+
+
+            }
+        }
+    }
+}
 
 @include mobilni {
     header {
@@ -67,6 +109,12 @@ footer {
         gap: 1rem !important;
 
 
+    }
+
+    footer {
+        article {
+            width: 100% !important;
+        }
     }
 
     .buttonDiv {

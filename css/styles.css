@@ -58,14 +58,49 @@ main {
 }
 
 footer {
-  background-color: rgba(243, 49, 17, 0.137254902);
+  background-color: #0e1538;
+  padding: 2rem;
+  color: #f2f2dd;
+}
+footer ul {
+  list-style-type: none;
+}
+footer a {
+  color: #f2f2dd;
+  text-decoration: none;
+}
+footer article {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+footer article section {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
+@media only screen and (max-width: 1200px) {
+  footer article {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  footer article section {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media only screen and (max-width: 810px) {
   header {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem !important;
+  }
+  footer article {
+    width: 100% !important;
   }
   .buttonDiv {
     display: flex !important;
