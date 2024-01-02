@@ -4,3 +4,115 @@
 @import 'vars';
 
 @include defaultState;
+@include customBody;
+
+header {
+    background-color: $tamnoPlava;
+    padding: 1rem 3rem;
+    @include flexJADT(space-between, flex-end);
+
+    figure {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-end;
+
+        figcaption {
+            color: $hoverZuta;
+            font-size: 1.5rem;
+
+        }
+    }
+
+
+    .navList {
+        ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $hoverZuta;
+        }
+
+    }
+
+    .smNavList {
+        display: none;
+    }
+
+    .buttonDiv {
+        align-self: center;
+
+        button {
+            @include customButton;
+        }
+    }
+}
+
+main {
+    background-color: #ff3f;
+}
+
+footer {
+    background-color: #f3311123;
+}
+
+
+@include mobilni {
+    header {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem !important;
+
+
+    }
+
+    .buttonDiv {
+        display: flex !important;
+        justify-content: flex-end;
+
+    }
+
+    .navList {
+        display: none;
+    }
+
+    .smNavList {
+        display: grid !important;
+        grid-column: span 2 !important;
+        text-align: center;
+
+        ul {
+            display: grid;
+            // gap: 2.5rem;
+
+            list-style-type: none;
+
+            li {
+                width: 100%;
+                padding: 1rem;
+
+                a {
+                    text-decoration: none;
+                    color: $hoverZuta;
+                }
+
+                &:hover {
+                    background-color: $hoverZuta;
+
+                    a {
+                        color: $tamnoPlava;
+
+                    }
+                }
+
+
+            }
+        }
+
+
+
+    }
+}

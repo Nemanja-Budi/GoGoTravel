@@ -3,8 +3,100 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Luxurious Roman", cursive;
   font-weight: bold;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100dvh;
+}
+
+header {
+  background-color: #0e1538;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  text-align: flex-start;
+}
+header figure {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+header figure figcaption {
+  color: #f2f2dd;
+  font-size: 1.5rem;
+}
+header .navList ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style-type: none;
+}
+header .navList a {
+  text-decoration: none;
+  color: #f2f2dd;
+}
+header .smNavList {
+  display: none;
+}
+header .buttonDiv {
+  align-self: center;
+}
+header .buttonDiv button {
+  background-color: #f2f2dd;
+  color: #0e1538;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+main {
+  background-color: #ffff33;
+}
+
+footer {
+  background-color: rgba(243, 49, 17, 0.137254902);
+}
+
+@media only screen and (max-width: 810px) {
+  header {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem !important;
+  }
+  .buttonDiv {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+  .navList {
+    display: none;
+  }
+  .smNavList {
+    display: grid !important;
+    grid-column: span 2 !important;
+    text-align: center;
+  }
+  .smNavList ul {
+    display: grid;
+    list-style-type: none;
+  }
+  .smNavList ul li {
+    width: 100%;
+    padding: 1rem;
+  }
+  .smNavList ul li a {
+    text-decoration: none;
+    color: #f2f2dd;
+  }
+  .smNavList ul li:hover {
+    background-color: #f2f2dd;
+  }
+  .smNavList ul li:hover a {
+    color: #0e1538;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
