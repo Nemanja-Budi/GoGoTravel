@@ -1,0 +1,63 @@
+@mixin defaultState {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: $tekstRoman;
+        font-weight: bold;
+        // color: $neutral;
+    }
+}
+
+@mixin customBody {
+    background: $background;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100dvh;
+}
+
+
+
+@mixin flexJADT($content, $align, $direction: row, $ta: flex-start) {
+    display: flex;
+    justify-content: $content;
+    align-items: $align;
+    flex-direction: $direction;
+    text-align: $ta;
+}
+
+@mixin customInput($customWidth) {
+    background: $background;
+    border: 1px solid $tamnoSiva;
+    border-radius: 0.3rem;
+    padding: 0.3rem 1rem;
+    width: $customWidth;
+    @content;
+}
+
+@mixin customButton {
+    background-color: $backgroundButton;
+    border: 1px solid $borderButton;
+    border-radius: 0.3rem;
+    padding: 0.125rem 0.5rem;
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+
+}
+
+@mixin srednji {
+    @media only screen and (max-width: 980px) {
+        @content;
+    }
+
+}
+
+@mixin mobilni {
+    @media only screen and (max-width: 810px) {
+        @content;
+    }
+}
