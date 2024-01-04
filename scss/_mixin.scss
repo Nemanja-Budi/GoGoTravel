@@ -3,44 +3,40 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        // font-family: $tekstRoman, cursive;
         font-weight: bold;
-        // color: $neutral;
+        list-style-type: none;
+        text-decoration: none;
     }
 }
 
 @mixin customBody {
-
-    // background: $background;
-    body {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
+        @include customGrid($rows: auto 1fr auto);
         height: 100dvh;
-    }
 }
 
 
+@mixin customGrid($rows: null, $columns: null, $gap: null, $row-gap: null, $column-gap: null) {
+    display: grid;
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+    gap: $gap;
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+  } 
 
-@mixin flexJADT($content, $align, $direction: row, $ta: flex-start) {
+
+@mixin customFlex($content:null, $align: null, $direction: null, $gap: null, $ta: null) {
     display: flex;
     justify-content: $content;
     align-items: $align;
     flex-direction: $direction;
+    gap: $gap;
     text-align: $ta;
 }
 
-@mixin customUL {
-    ul {
-        list-style-type: none;
-    }
-
-
-    a {
-        text-decoration: none;
-        color: $hoverZuta;
-    }
-
-    @content
+@mixin customWidth($sirina, $visina:0) {
+    width: $sirina;
+    margin: $visina auto;
 }
 
 @mixin customButton {

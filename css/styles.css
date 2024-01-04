@@ -4,6 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: bold;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 body {
@@ -13,18 +15,16 @@ body {
 }
 
 header {
-  background-color: #0e1538;
-  padding: 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  flex-direction: row;
-  text-align: flex-start;
+  background-color: #0e1538;
+  padding: 1rem 3rem;
 }
 header figure {
   display: flex;
-  gap: 1rem;
   align-items: flex-end;
+  gap: 1rem;
 }
 header figure figcaption {
   color: #f2f2dd;
@@ -33,10 +33,8 @@ header figure figcaption {
 header .navList ul {
   display: flex;
   gap: 2.5rem;
-  list-style-type: none;
 }
 header .navList a {
-  text-decoration: none;
   color: #f2f2dd;
 }
 header .smNavList {
@@ -70,8 +68,8 @@ main section .formDiv {
 main section form {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  padding: 0.5rem;
   gap: 0.5rem;
+  padding: 0.5rem;
   background: #fff;
   border-radius: 2rem;
 }
@@ -106,19 +104,19 @@ main article h1 {
 main article .figureDiv {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   padding: 2rem;
 }
 main article .figureDiv figure {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
   box-shadow: 1px 1px 1px 1px #7079f7;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 1rem;
-  gap: 0.5rem;
   transition: transform 2s ease-in-out;
 }
 main article .figureDiv figure img {
@@ -136,12 +134,8 @@ footer {
   padding: 2rem;
   color: #f2f2dd;
 }
-footer ul {
-  list-style-type: none;
-}
 footer a {
   color: #f2f2dd;
-  text-decoration: none;
 }
 footer article {
   width: 70%;
@@ -161,10 +155,10 @@ footer article section {
     grid-template-rows: 0.5fr 1fr;
   }
   .formDiv {
-    width: 90% !important;
+    width: 95% !important;
   }
   .figureDiv {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .figureDiv .berlinFigure {
@@ -174,9 +168,9 @@ footer article section {
   }
   footer article {
     display: flex;
-    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
   }
   footer article section {
     display: flex;
@@ -185,13 +179,13 @@ footer article section {
 }
 @media only screen and (max-width: 810px) {
   header {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem !important;
+    gap: 1rem;
   }
   main {
-    display: grid !important;
-    grid-template-rows: auto 1fr !important;
+    display: grid;
+    grid-template-rows: auto 1fr;
   }
   .formDiv {
     width: 100%;
@@ -202,7 +196,7 @@ footer article section {
     width: 100%;
   }
   .figureDiv {
-    display: grid !important;
+    display: grid;
     grid-template-columns: 1fr !important;
   }
   .figureDiv .berlinFigure {
@@ -213,7 +207,7 @@ footer article section {
     width: 100% !important;
   }
   .buttonDiv {
-    display: flex !important;
+    display: flex;
     justify-content: flex-end;
   }
   .navList {
@@ -226,14 +220,12 @@ footer article section {
   }
   .smNavList ul {
     display: grid;
-    list-style-type: none;
   }
   .smNavList ul li {
     width: 100%;
     padding: 1rem;
   }
   .smNavList ul li a {
-    text-decoration: none;
     color: #f2f2dd;
   }
   .smNavList ul li:hover {
@@ -243,7 +235,7 @@ footer article section {
     color: #0e1538;
   }
   form {
-    display: grid !important;
+    display: grid;
     grid-template-columns: 1fr !important;
   }
   form div {
